@@ -1,4 +1,4 @@
-A small template project to get started using OPAL.
+A small template project to get started using the [OPAL Java bytecode framework](http://www.opal-project.de). 
 
 ### How do I get set up? ###
 
