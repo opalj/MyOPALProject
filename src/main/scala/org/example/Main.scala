@@ -14,6 +14,7 @@ object Main extends DefaultOneStepAnalysis {
     parameters: Seq[String],
     isInterrupted: () ⇒ Boolean
   ): BasicReport = {
+
     val nativeMethods =
       for {
         classFile ← project.allClassFiles.par
@@ -23,6 +24,8 @@ object Main extends DefaultOneStepAnalysis {
 
     val publicMethodsCount = nativeMethods.size
     val r = nativeMethods.mkString(s"$publicMethodsCount public methods found:\n\t", "\n\t", "\n")
+
     BasicReport(r)
   }
+
 }
