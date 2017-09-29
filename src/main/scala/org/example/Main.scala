@@ -12,15 +12,14 @@ object Main extends DefaultOneStepAnalysis {
   def doAnalyze(
     project: Project[URL],
     parameters: Seq[String],
-    isInterrupted: () ⇒ Boolean
-  ): BasicReport = {
+    isInterrupted: () ⇒ Boolean): BasicReport = {
 
     val nativeMethods =
       for {
         classFile ← project.allClassFiles.par
         method ← classFile.methods
         if method.isPublic
-      } yield method.toJava(classFile)
+      } yield method.toJava
 
     val publicMethodsCount = nativeMethods.size
     val r = nativeMethods.mkString(s"$publicMethodsCount public methods found:\n\t", "\n\t", "\n")

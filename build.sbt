@@ -12,4 +12,4 @@ scalaVersion    in ThisBuild 	:= "2.11.11"
 // 	 "-Dorg.opalj.threads.IOBoundTasks=3"          // Number of (hyperthreaded) cores * [1,5...3]
 // )
 
-libraryDependencies += "de.opal-project" %% "abstract-interpretation-framework" % "0.8.14"
+libraryDependencies += "de.opal-project" %% "abstract-interpretation-framework" % "0.8.15"
