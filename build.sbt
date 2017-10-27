@@ -2,7 +2,7 @@ name                            := "MyOPALProject"
 
 organization    in ThisBuild 	:= "org.exmple"
 version         in ThisBuild 	:= "0.1.0-SNAPSHOT"
-scalaVersion    in ThisBuild 	:= "2.11.11"
+scalaVersion    in ThisBuild 	:= "2.12.4"
 
 // fork         in run          := true
 // javaOptions 	in run          += "-Xmx4G"        // BETTER: javaOptions in run += "-Xmx16G"
@@ -12,4 +12,4 @@ scalaVersion    in ThisBuild 	:= "2.11.11"
 // 	 "-Dorg.opalj.threads.IOBoundTasks=3"          // Number of (hyperthreaded) cores * [1,5...3]
 // )
 
-libraryDependencies += "de.opal-project" %% "abstract-interpretation-framework" % "0.8.14"
+libraryDependencies += "de.opal-project" %% "abstract-interpretation-framework" % "1.0.0"
