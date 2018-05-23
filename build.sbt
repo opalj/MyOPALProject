@@ -2,7 +2,7 @@ name                            := "MyOPALProject"
 
 organization    in ThisBuild 	:= "org.exmple"
 version         in ThisBuild 	:= "0.1.0-SNAPSHOT"
-scalaVersion    in ThisBuild 	:= "2.12.4"
+scalaVersion    in ThisBuild 	:= "2.12.6"
 
 // fork         in run          := true
 // javaOptions 	in run          += "-Xmx4G"        // BETTER: javaOptions in run += "-Xmx16G"
