@@ -1,6 +1,6 @@
 name                            := "MyOPALProject"
 
-organization    in ThisBuild 	:= "org.exmple"
+organization    in ThisBuild 	:= "org.example"
 version         in ThisBuild 	:= "0.1.0-SNAPSHOT"
 scalaVersion    in ThisBuild 	:= "2.12.8"
 
