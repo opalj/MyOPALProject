@@ -9,22 +9,19 @@ object Main extends DefaultOneStepAnalysis {
 
   override def description: String = "Counts the number of public methods."
 
-  def doAnalyze(
-    project: Project[URL],
-    parameters: Seq[String],
-    isInterrupted: () ⇒ Boolean): BasicReport = {
+  def doAnalyze(p: Project[URL], params: Seq[String], isInterrupted: () ⇒ Boolean): BasicReport = {
 
     val nativeMethods =
       for {
-        classFile ← project.allClassFiles.par
+        classFile ← p.allClassFiles.par
         method ← classFile.methods
         if method.isPublic
-      } yield method.toJava
+      } yield {
+        method.toJava
+      }
 
     val publicMethodsCount = nativeMethods.size
-    val r = nativeMethods.mkString(s"$publicMethodsCount public methods found:\n\t", "\n\t", "\n")
-
-    BasicReport(r)
+    BasicReport(nativeMethods.mkString(s"$publicMethodsCount public methods found:\n\t", "\n\t", "\n"))
   }
 
 }
