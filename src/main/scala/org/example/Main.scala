@@ -21,7 +21,8 @@ object Main extends DefaultOneStepAnalysis {
       }
 
     val publicMethodsCount = nativeMethods.size
-    BasicReport(nativeMethods.mkString(s"$publicMethodsCount public methods found:\n\t", "\n\t", "\n"))
+    BasicReport(
+      nativeMethods.mkString(s"$publicMethodsCount public methods found:\n\t", "\n\t", "\n"))
   }
 
 }
