@@ -1,11 +1,12 @@
 package org.example
 
 import java.net.URL
-import org.opalj.br.analyses.DefaultOneStepAnalysis
+
 import org.opalj.br.analyses.BasicReport
 import org.opalj.br.analyses.Project
+import org.opalj.br.analyses.ProjectAnalysisApplication
 
-object Main extends DefaultOneStepAnalysis {
+object Main extends ProjectAnalysisApplication {
 
   override def description: String = "Counts the number of public methods."
 
@@ -21,8 +22,8 @@ object Main extends DefaultOneStepAnalysis {
       }
 
     val publicMethodsCount = nativeMethods.size
-    BasicReport(
-      nativeMethods.mkString(s"$publicMethodsCount public methods found:\n\t", "\n\t", "\n"))
+
+    nativeMethods.mkString(s"$publicMethodsCount public methods found:\n\t", "\n\t", "\n")
   }
 
 }
