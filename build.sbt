@@ -1,8 +1,8 @@
 name                            := "MyOPALProject"
 
 organization    in ThisBuild 	:= "org.example"
-version         in ThisBuild 	:= "0.1.0-SNAPSHOT"
-scalaVersion    in ThisBuild 	:= "2.12.8"
+version         in ThisBuild 	:= "0.2.0-SNAPSHOT"
+scalaVersion    in ThisBuild 	:= "2.12.13"
 
 // fork         in run          := true
 // javaOptions 	in run          += "-Xmx4G"        // BETTER: javaOptions in run += "-Xmx16G"
@@ -14,4 +14,4 @@ scalaVersion    in ThisBuild 	:= "2.12.8"
 
 resolvers in ThisBuild ++= Seq(Opts.resolver.sonatypeSnapshots)
 
-libraryDependencies += "de.opal-project" %% "opal-developer-tools" % "3.0.0-SNAPSHOT" withJavadoc() withSources()
+libraryDependencies += "de.opal-project" %% "tools" % "4.0.0" withJavadoc() withSources()
